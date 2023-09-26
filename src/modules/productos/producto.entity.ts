@@ -4,4 +4,5 @@ export interface Producto {
     price:number,
     stock:number,
     category:string,
+    isAvailable:boolean
 }

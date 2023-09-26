@@ -18,6 +18,10 @@ const ProductoSchemaMongo = new Schema<Producto>({
     category:{
         type: String,
         required: true,
+    },
+    isAvailable:{
+        type:Boolean,
+        default:true
     }
 },
 {
@@ -27,8 +31,8 @@ const ProductoSchemaMongo = new Schema<Producto>({
 )
 
 // Modelo para un producto en MongoDB con Mongoose
-const ProductoDelMongo = model<Producto>('Producto', ProductoSchemaMongo)
+const ProductoModelMongo = model<Producto>('Producto', ProductoSchemaMongo)
 
 
 
-export { ProductoDelMongo }
+export { ProductoModelMongo }
